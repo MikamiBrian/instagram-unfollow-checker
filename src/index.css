@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+}
+
+/* ===== APP ===== */
+.app-bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 1200px;
+  padding: 28px;
+  border-radius: 20px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.subtitle {
+  margin-top: 6px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* ===== UPLOAD ===== */
+.upload-box {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 22px;
+  border-radius: 14px;
+  border: 1px dashed #6366f1;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.upload-box:hover {
+  background: rgba(99, 102, 241, 0.15);
+}
+
+.status {
+  margin-top: 14px;
+  color: #a5b4fc;
+  font-size: 14px;
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* ===== RESULT BOX ===== */
+.box {
+  background: rgba(2, 6, 23, 0.7);
+  border-radius: 14px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.box h3 {
+  margin: 0 0 10px;
+  color: #818cf8;
+}
+
+.box.danger h3 {
+  color: #f87171;
+}
+
+.list {
+  max-height: 260px;
+  overflow-y: auto;
+  font-size: 13px;
+}
+
+.user {
+  font-family: monospace;
+  padding: 4px 0;
+  opacity: 0.9;
+}
+
+/* ===== SIDE PANEL ===== */
+.side {
+  background: rgba(2, 6, 23, 0.65);
+  border-radius: 16px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  height: fit-content;
+}
+
+.side h3 {
+  margin: 0 0 10px;
+  color: #a5b4fc;
+  font-size: 16px;
+}
+
+.credit-text {
+  font-size: 13px;
+  color: #cbd5f5;
+  line-height: 1.5;
+}
+
+.react-badge {
+  color: #61dafb;
+  font-weight: 600;
+}
+
+/* ===== IG LINK ===== */
+.ig-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    #833ab4,
+    #fd1d1d,
+    #fcb045
+  );
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.ig-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.ig-icon {
+  font-size: 18px;
+}
+
+.credit-footer {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* ===== LOADER ===== */
+.loader {
+  margin-top: 14px;
+  width: 32px;
+  height: 32px;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
